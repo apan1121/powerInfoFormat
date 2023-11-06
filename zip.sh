@@ -1,4 +1,4 @@
-folder_path="./output" # 将此路径替换为要压缩文件的文件夹路径
+folder_path="./output"
 to_path="./outputZip"
 
 if [ -d "$folder_path" ]; then
@@ -6,9 +6,9 @@ if [ -d "$folder_path" ]; then
     if [ -f "$file" ]; then
       filename=$(basename "$file")
       zip -j "$to_path/${filename%.*}.zip" "$file"
-      echo "已将 $file 压缩为 $to_path/${filename%.*}.zip"
+      echo "已將 $file 壓縮為 $to_path/${filename%.*}.zip"
     fi
   done
 else
-  echo "指定的文件夹路径无效。"
+  echo "指定資料夾無效。"
 fi
